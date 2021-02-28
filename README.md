@@ -1,5 +1,6 @@
 
 [![yamdb_final](https://github.com/MBohdan/yamdb_final/workflows/yamdb_final/badge.svg)](https://github.com/MBohdan/yamdb_final/actions)
+[![Twitter Badge](https://img.shields.io/badge/Twitter-Profile-informational?style=flat&logo=twitter&logoColor=white&color=1CA2F1)](https://twitter.com/BraydonCoyer)
 
 
 # My Project 1
