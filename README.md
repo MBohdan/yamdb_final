@@ -1,5 +1,5 @@
 
-![Yamdb_Final Actions Status](https://github.com/MBohdan/yamdb_final/workflows/yamdb_workflow.yaml/badge.svg)
+![Yamdb_Final](https://github.com/MBohdan/yamdb_final/workflows/yamdb_workflow.yaml/badge.svg)
 
 # My Project 1
 
