@@ -31,7 +31,8 @@ class RegisterView(APIView):
         serializer.is_valid(raise_exception=True)
         email = serializer.data["email"]
         username = serializer.data["username"]
-        user, created = User.objects.get_or_create(email=email, username=username)
+        (user, created) = User.objects.get_or_create(email=email,
+        username=username)
         confirmation_code = default_token_generator.make_token(user)
         send_mail_to_user(email, confirmation_code)
         return Response({"email": email})
