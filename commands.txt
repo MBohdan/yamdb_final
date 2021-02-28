@@ -1,0 +1,4 @@
+docker exec api_yamdb_web_1 python manage.py loaddata fixtures.json   #  load fixtures in project
+docker exec  -it api_yamdb_web_1 python manage.py createsuperuser --email EMAIL@EMAIL.COM --username MYUSER  # create superuser
+docker-compose up -d # Run application
+docker-compose down # stop application
