@@ -1,5 +1,5 @@
+[![Actions Status](https://github.com/MBohdan/yamdb_final/workflows/yamdb_final_workflow/badge.svg)](https://github.com/MBohdan/yamdb_final/actions)
 
-![Yamdb_Final](https://img.shields.io/github/workflow/status/MBohdan/yamdb_final/yamdb_final_workflow)
 
 
 # My Project 1
