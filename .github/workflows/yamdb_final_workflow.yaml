@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: yamdb_final workflow
+name: yamdb_final_workflow
 
 on: [push]
 
