@@ -1,5 +1,5 @@
 
-![Yamdb_Final](https://github.com/MBohdan/yamdb_final/workflows/yamdb_workflow.yaml/badge.svg)
+[![yamdb_final](https://github.com/MBohdan/yamdb_final/actions/workflows/yamdb_final.yaml/badge.svg?branch=master)](https://github.com/MBohdan/yamdb_final)
 
 # My Project 1
 
