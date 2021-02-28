@@ -1,5 +1,5 @@
 
-![branch parameter](https://github.com/MBohdan/yamdb_final/actions/workflows/yamdb_final/badge.svg?branch=master)
+[![Yamdb_Final Actions Status](https://github.com/MBohdan/yamdb_final/workflows/yamdb_workflow/badge.svg)](https://github.com/MBohdan/yamdb_final/actions)
 
 # My Project 1
 
