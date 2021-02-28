@@ -1,3 +1,6 @@
+
+https://github.com/MBohdan/yamdb_final/actions/workflows/yamdb_final/badge.svg
+
 # My Project 1
 
 One Paragraph of project description goes here
