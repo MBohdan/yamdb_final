@@ -1,3 +1,7 @@
+[![GitHub Workflow Status](https://github.com/MBohdan/yamdb_final/workflows/yamdb_final_workflow/badge.svg)](https://github.com/MBohdan/yamdb_final/actions)
+
+
+
 # My Project 1
 
 One Paragraph of project description goes here
