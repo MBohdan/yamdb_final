@@ -1,47 +1,9 @@
-#version: '3.7'
- 
-#volumes:
-#  postgres_data:
-#  static_volume:
- 
-#services:
-#  db:
-#    image: postgres:13.1-alpine
-#    volumes:
-#      - postgres_data:/var/lib/postgresql/data/
-#    env_file:
-#      - ./.env
-#  web:
-#    build: .
-  # image: gloom13/api_yamdb_web:v2
-#    restart: always
-#    command: gunicorn api_yamdb.wsgi:application --bind 0.0.0.0:8000
-#    volumes:
-#      - static_volume:/code/static
-   # ports:
-   #   - "8000:8000"
-#    depends_on:
-#      - db
-#    env_file:
-#      - ./.env
-
-#  nginx:
-#    image: nginx:1.19.6-alpine
-#    restart: always
-#    volumes:
-#      - static_volume:/code/static
-      #- ./nginx:/etc/nginx/conf.d
-#    ports:
-#      - "80:80"
-#    depends_on:
-#      - web
-
-
 version: '3.7'
  
 volumes:
   postgres_data:
   static_volume:
+
  
 services:
   db:
@@ -50,6 +12,7 @@ services:
       - postgres_data:/var/lib/postgresql/data/
     env_file:
       - ./.env
+      
   web:
     build: .
     restart: always
@@ -61,6 +24,7 @@ services:
       - db
     env_file:
       - ./.env
+      
   nginx:
     image: nginx:latest
     restart: always

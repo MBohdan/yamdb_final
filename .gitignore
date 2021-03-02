@@ -3,6 +3,7 @@ env/
 venv/
 .venv
 .venv/
+.env
 
 __pycache__/
 *.py[cod]
@@ -17,6 +18,8 @@ __pycache__/
 *.sublime-workspace
 
 staticfiles/
+sent_emails/
 posts/static/
 
 db.sqlite3
+app.log
