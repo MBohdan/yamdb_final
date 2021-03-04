@@ -58,7 +58,11 @@ jobs:
          passphrase: ${{ secrets.PASSPHRASE }}
          script: |
            export ${{ secrets.DB_ENGINE }}
-           
+           export ${{ secrets.DB_NAME }}
+           export ${{ secrets.POSTGRES_USER }}
+           export ${{ secrets.POSTGRES_PASSWORD }}
+           export ${{ secrets.DB_HOST }}
+           export ${{ secrets.DB_PORT }}
            git clone git@github.com:MBohdan/yamdb_final.git
            cd yamdb_final
            sudo docker-compose up -d
