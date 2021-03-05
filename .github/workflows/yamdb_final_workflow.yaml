@@ -65,6 +65,12 @@ jobs:
            export DB_HOST=${{ secrets.DB_HOST }}
            export DB_PORT=${{ secrets.DB_PORT }}
            
+           sudo docker-compose down
+           sudo docker volume rm $(docker volume ls -q)
+           sudo docker rmi $(docker images -a -q)
+           
+           rm -rf yamdb_final/
+           
            git clone git@github.com:MBohdan/yamdb_final.git
            cd yamdb_final
            sudo docker-compose up -d
