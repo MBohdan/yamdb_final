@@ -2,37 +2,76 @@
 
 
 
-# My Project 1
+# Yamdb_Final
 
-One Paragraph of project description goes here
+##### REST API для сервиса YaMDb — базы отзывов о фильмах, книгах и музыке.
 
-## Getting Started
+## Описание проекта
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+#### API для сервиса YaMDb. Позволяет работать со следующими сущностями:
 
-### Prerequisites
+##### Отзывы:
 
-How to use application:
++ получить список всех отзывов;
++ создать новый отзыв;
++ получить отзыв по id;
++ частично обновить отзыв по id;
++ удалить отзыв по id.
 
-```
-docker exec api_yamdb_web_1 python manage.py loaddata fixtures.json   #  load fixtures in project
-docker exec  -it api_yamdb_web_1 python manage.py createsuperuser --email EMAIL@EMAIL.COM --username MYUSER  # create superuser
-docker-compose up -d # Run application
-docker-compose down # stop application
+##### Комментарии к отзывам:
 
-```
++ получить список всех комментариев к отзыву по id;
++ создать новый комментарий для отзыва, получить комментарий для отзыва по id;
++ частично обновить комментарий к отзыву по id;
++ удалить комментарий к отзыву по id.
 
-### Installing
+##### JWT-токен:
 
-A step by step series of examples that tell you have to get a development env running
++ отправление confirmation_code на переданный email;
++ получение JWT-токена в обмен на email и confirmation_code.
 
-Say what the step will be
 
-```
-Give the example
-```
+##### Пользователи:
 
-And repeat
++ получить список всех пользователей;
++ создание пользователя получить пользователя по username;
++ изменить данные пользователя по username;
++ удалить пользователя по username;
++ получить данные своей учетной записи;
++ изменить данные своей учетной записи.
 
-```
-until finished
+##### Категории (типы) произведений:
+
++ получить список всех категорий;
++ создать категорию;
++ удалить категорию.
+
+##### Категории жанров:
+
++ получить список всех жанров
++ создать жанр;
++ удалить жанр.
+
+##### Произведения, к которым пишут отзывы:
+
++ получить список всех объектов;
++ создать произведение для отзывов;
++ информация об объекте;
++ обновить информацию об объекте;
++ удалить произведение.
+
+## Документация
+
+[Полная документация API](http://84.201.153.150:1337/redoc/#section/Opisanie)
+
+
+### Использование
+
+При каждом push в ветку master разворачивается и деплоится новая версия приложения:
+
+    on:
+      push:
+        branches:
+          - master
+
+#### Проект доступен по адресу: http://84.201.153.150:1337
