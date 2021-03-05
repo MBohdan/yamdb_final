@@ -1,4 +1,4 @@
-# This is a basic workflow to help you get started with Actions
+# This is a basic workflow # This is a basic workflow to help you get started with Actions
 
 name: yamdb_final_workflow
 
@@ -57,9 +57,15 @@ jobs:
          key: ${{ secrets.SSH_KEY }}
          passphrase: ${{ secrets.PASSPHRASE }}
          script: |
-           sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final:latest
-           sudo docker stop $(sudo docker ps -a -q)
-           sudo docker run --rm -d -p 1337:1337 ${{ secrets.DOCKER_USERNAME }}/yamdb_final:latest
+           export ${{ secrets.DB_ENGINE }}
+           export ${{ secrets.DB_NAME }}
+           export ${{ secrets.POSTGRES_USER }}
+           export ${{ secrets.POSTGRES_PASSWORD }}
+           export ${{ secrets.DB_HOST }}
+           export ${{ secrets.DB_PORT }}
+           git clone git@github.com:MBohdan/yamdb_final.git
+           cd yamdb_final
+           sudo docker-compose up -d
            
   send_message:
       runs-on: ubuntu-latest
