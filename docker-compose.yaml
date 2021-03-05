@@ -10,8 +10,15 @@ services:
     image: postgres:12.4
     volumes:
       - postgres_data:/var/lib/postgresql/data/
-    env_file:
-      - ./.env
+   # env_file:
+   #   - ./.env
+    enviroment:
+      - DB_ENGINE=django.db.backends.postgresql
+      - DB_NAME=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - DB_HOST=db
+      - DB_PORT=5432
       
   web:
     image: gloom13/yamdb_final:v.3
@@ -22,8 +29,15 @@ services:
       - "8000"
     depends_on:
       - db
-    env_file:
-      - ./.env
+   # env_file:
+   #   - ./.env
+    enviroment:
+      - DB_ENGINE=django.db.backends.postgresql
+      - DB_NAME=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - DB_HOST=db
+      - DB_PORT=5432
       
   nginx:
     image: nginx:latest
