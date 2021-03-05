@@ -45,6 +45,7 @@ jobs:
           with:
             push: true
             tags: ${{ secrets.DOCKER_USERNAME }}/yamdb_final:latest
+            
   deploy:
      runs-on: ubuntu-latest
      needs: build_and_push_to_docker_hub
@@ -57,12 +58,13 @@ jobs:
          key: ${{ secrets.SSH_KEY }}
          passphrase: ${{ secrets.PASSPHRASE }}
          script: |
-           export ${{ secrets.DB_ENGINE }}
-           export ${{ secrets.DB_NAME }}
-           export ${{ secrets.POSTGRES_USER }}
-           export ${{ secrets.POSTGRES_PASSWORD }}
-           export ${{ secrets.DB_HOST }}
-           export ${{ secrets.DB_PORT }}
+           export DB_ENGINE=${{ secrets.DB_ENGINE }}
+           export DB_NAME=${{ secrets.DB_NAME }}
+           export POSTGRES_USER=${{ secrets.POSTGRES_USER }}
+           export POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }}
+           export DB_HOST=${{ secrets.DB_HOST }}
+           export DB_PORT=${{ secrets.DB_PORT }}
+           
            git clone git@github.com:MBohdan/yamdb_final.git
            cd yamdb_final
            sudo docker-compose up -d
